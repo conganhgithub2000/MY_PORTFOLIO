@@ -44,6 +44,9 @@ header {
       .nav-item {
         .nav-link {
           color: $color-text-1;
+          i {
+            font-size: 26px;
+          }
         }
       }
     }
@@ -127,6 +130,7 @@ header {
             overflow: hidden;
             background-color: $color-bg-2;
             margin-bottom: 30px;
+            height: 540px;
             img {
               width: 100%;
               height: 260px;
@@ -147,6 +151,7 @@ header {
                 display: flex;
                 justify-content: space-between;
                 align-items: center;
+                // margin-top: auto;
                 a {
                   text-decoration: none;
                   color: $color-text-7;
@@ -154,6 +159,100 @@ header {
               }
             }
           }
+        }
+      }
+    }
+  }
+}
+footer {
+  .contact__title {
+    text-align: center;
+    margin-top: 90px;
+    margin-bottom: 60px;
+    h2 {
+      color: $color-text-1;
+      font-size: 40px;
+      font-weight: 700;
+    }
+  }
+  .footer__contact {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 50px;
+    img {
+      width: 300px;
+      margin-left: 110px;
+      border-radius: 20px;
+    }
+    .contact__content {
+      margin-right: 110px;
+      width: 500px;
+      h5 {
+        color: $color-text-1;
+      }
+      .form-group {
+        margin-right: 25px;
+        .form-control {
+          margin: 30px 0;
+        }
+        .input__name {
+          margin-top: 30px;
+          height: 50px;
+        }
+        .input__email {
+          height: 50px;
+        }
+        .input__message {
+          height: 100px;
+        }
+        button {
+          font-size: 20px;
+          padding: 10px 60px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+  .contact__bottom {
+    position: relative;
+    margin-top: 70px;
+    margin-bottom: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    h2 {
+      color: $color-text-1;
+      font-weight: 700;
+      &::before {
+        content: "";
+        width: 100%;
+        height: 5px;
+        background-color: $color-text-2;
+        position: absolute;
+        top: -20px;
+        left: 0;
+      }
+    }
+    .contact__bottom--content {
+      &::after {
+        content: "";
+        width: 100%;
+        height: 5px;
+        background-color: $color-text-2;
+        position: absolute;
+        top: 53px;
+        left: 0;
+      }
+      span {
+        color: $color-text-2;
+        margin: 30px;
+      }
+      a {
+        text-decoration: none;
+        i {
+          color: $color-text-2;
+          font-size: 26px;
+          margin-left: 20px;
         }
       }
     }
