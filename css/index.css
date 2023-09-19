@@ -114,7 +114,7 @@ header .navbar-collapse .navbar-nav .nav-item .nav-link i {
      object-fit: cover;
 }
 .content .projects .projects__content .row .col-4 .card .card-body {
-  padding: 20px 30px;
+  padding: 20px;
 }
 .content .projects .projects__content .row .col-4 .card .card-body h5 {
   color: #cccccc;
