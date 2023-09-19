@@ -1,0 +1,132 @@
+/* reset CSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: "Poppins", sans-serif;
+  background-color: #191919;
+}
+
+body .container-my {
+  width: 80%;
+  margin: auto;
+}
+
+header {
+  margin-top: 30px;
+}
+header .navbar {
+  padding: 0;
+}
+header .navbar .navbar-brand {
+  width: 97px;
+  height: 59px;
+}
+header .navbar-collapse .navbar-nav {
+  align-items: center;
+}
+header .navbar-collapse .navbar-nav .nav-item .nav-link {
+  color: #cccccc;
+}
+
+.content .myself {
+  margin-top: 250px;
+  display: flex;
+  justify-content: space-between;
+}
+.content .myself .myself__name {
+  color: #686fff;
+  font-size: 58px;
+  font-weight: 700;
+  line-height: 70px;
+}
+.content .myself .myself__name p span {
+  color: #e70faa;
+}
+.content .myself .myself__ing img {
+  height: 290px;
+  width: 290px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 50%;
+  border: 9px solid #686fff;
+}
+.content .technology {
+  margin-top: 150px;
+}
+.content .technology .technology__title {
+  text-align: center;
+}
+.content .technology .technology__title h2 {
+  color: #cccccc;
+  font-size: 40px;
+  font-weight: 700;
+}
+.content .technology .technology__title p {
+  font-size: 22px;
+  color: #a7a7a7;
+  margin: 20px;
+}
+.content .technology .technology__content {
+  margin-bottom: 100px;
+}
+.content .technology .technology__content .technology__content--top,
+.content .technology .technology__content .technology__content--right {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 50px;
+}
+.content .projects .projects__title {
+  text-align: center;
+  margin-bottom: 60px;
+}
+.content .projects .projects__title h2 {
+  color: #cccccc;
+  font-size: 40px;
+  font-weight: 700;
+}
+.content .projects .projects__title p {
+  font-size: 22px;
+  color: #a7a7a7;
+  margin: 20px;
+}
+.content .projects .projects__content .row .col-4 .card {
+  width: 375px;
+  border: none;
+  border-radius: 20px;
+  overflow: hidden;
+  background-color: #363636;
+  margin-bottom: 30px;
+}
+.content .projects .projects__content .row .col-4 .card img {
+  width: 100%;
+  height: 260px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.content .projects .projects__content .row .col-4 .card .card-body {
+  padding: 20px 30px;
+}
+.content .projects .projects__content .row .col-4 .card .card-body h5 {
+  color: #cccccc;
+  font-size: 22px;
+}
+.content .projects .projects__content .row .col-4 .card .card-body p,
+.content .projects .projects__content .row .col-4 .card .card-body h6 {
+  color: #a7a7a7;
+}
+.content .projects .projects__content .row .col-4 .card .card-body .card__link {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.content .projects .projects__content .row .col-4 .card .card-body .card__link a {
+  text-decoration: none;
+  color: #fff;
+}/*# sourceMappingURL=index.css.map */
