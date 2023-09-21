@@ -17,7 +17,12 @@ body .container-my {
 }
 
 header {
-  margin-top: 30px;
+  padding: 20px 0;
+  position: fixed;
+  top: 0;
+  width: 100%;
+  background-color: #191919;
+  z-index: 1;
 }
 header .navbar {
   padding: 0;
@@ -35,13 +40,33 @@ header .navbar-collapse .navbar-nav {
 }
 header .navbar-collapse .navbar-nav .nav-item .nav-link {
   color: #cccccc;
+  position: relative;
+}
+header .navbar-collapse .navbar-nav .nav-item .nav-link::after {
+  content: "";
+  width: 0;
+  height: 4px;
+  background-color: #00c0fd;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%, 0);
+  transition: width 0.5s ease-in;
+}
+header .navbar-collapse .navbar-nav .nav-item .nav-link:hover::after {
+  content: "";
+  width: 100%;
 }
 header .navbar-collapse .navbar-nav .nav-item .nav-link i {
   font-size: 26px;
+  transition: all 0.5s;
+}
+header .navbar-collapse .navbar-nav .nav-item .nav-link i:hover {
+  color: #e70faa;
 }
 
 .content .myself {
-  margin-top: 150px;
+  margin-top: 200px;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -52,8 +77,22 @@ header .navbar-collapse .navbar-nav .nav-item .nav-link i {
   font-weight: 700;
   line-height: 70px;
 }
-.content .myself .myself__name p span {
-  color: #e70faa;
+.content .myself .myself__name p i {
+  color: #e3d536;
+  animation: hello 3s steps(20) infinite;
+}
+.content .myself .myself__name .myName {
+  position: relative;
+  overflow: hidden;
+  border-right: 3px solid;
+  width: 0;
+  white-space: nowrap;
+  animation: typewriter 5s steps(50) infinite alternate, blink 0.5s steps(10) infinite;
+}
+.content .myself .myself__name .myName span {
+  background: linear-gradient(to right, rgba(5, 211, 60, 0.6274509804), #0bdfd8);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 @media screen and (max-width: 910px) {
   .content .myself .myself__name {
@@ -117,9 +156,12 @@ header .navbar-collapse .navbar-nav .nav-item .nav-link i {
   border: none;
   border-radius: 20px;
   overflow: hidden;
-  background-color: #363636;
+  background: linear-gradient(90deg, rgb(0, 192, 253) 0%, rgb(231, 15, 170) 100%);
   margin-bottom: 30px;
   height: 530px;
+}
+.content .projects .projects__content .row .card:hover {
+  box-shadow: 0 0 5px #e70faa, 0 0 20px #e70faa, 0 0 30px #e70faa;
 }
 @media screen and (max-width: 540px) {
   .content .projects .projects__content .row .card {
@@ -139,32 +181,43 @@ header .navbar-collapse .navbar-nav .nav-item .nav-link i {
     margin: 14px auto;
   }
 }
-.content .projects .projects__content .row .card img {
+.content .projects .projects__content .row .card .card__content {
+  margin: 6px;
+  border-radius: 14px;
+  overflow: hidden;
+  background: #363636;
+  height: 100%;
+}
+.content .projects .projects__content .row .card .card__content img {
   width: 100%;
   height: 260px;
   -o-object-fit: cover;
      object-fit: cover;
 }
-.content .projects .projects__content .row .card .card-body {
+.content .projects .projects__content .row .card .card__content .card-body {
   padding: 20px;
 }
-.content .projects .projects__content .row .card .card-body h5 {
+.content .projects .projects__content .row .card .card__content .card-body h5 {
   color: #cccccc;
   font-size: 22px;
 }
-.content .projects .projects__content .row .card .card-body p,
-.content .projects .projects__content .row .card .card-body h6 {
+.content .projects .projects__content .row .card .card__content .card-body p,
+.content .projects .projects__content .row .card .card__content .card-body h6 {
   color: #a7a7a7;
 }
-.content .projects .projects__content .row .card .card-body .card__link {
+.content .projects .projects__content .row .card .card__content .card-body .card__link {
   margin-top: 20px;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content .projects .projects__content .row .card .card-body .card__link a {
+.content .projects .projects__content .row .card .card__content .card-body .card__link a {
   text-decoration: none;
   color: #fff;
+  transition: all 0.6s;
+}
+.content .projects .projects__content .row .card .card__content .card-body .card__link a:hover {
+  color: #e70faa;
 }
 
 footer .contact__title {
@@ -219,6 +272,14 @@ footer .footer__contact .contact__content .form-group {
     margin-right: 0;
   }
 }
+footer .footer__contact .contact__content .form-group input {
+  color: #686fff;
+  border: 3px solid #00c0fd;
+  border-radius: 10px;
+}
+footer .footer__contact .contact__content .form-group input:active {
+  box-shadow: 0 0 10px #e70faa, 0 0 20px #e70faa;
+}
 footer .footer__contact .contact__content .form-group .form-control {
   margin: 30px 0;
 }
@@ -236,6 +297,13 @@ footer .footer__contact .contact__content .form-group button {
   font-size: 20px;
   padding: 10px 60px;
   margin-top: 10px;
+  transition: all 0.5s;
+  color: #fff;
+  background: linear-gradient(90deg, rgb(0, 192, 253) 0%, rgb(231, 15, 170) 100%);
+  background-size: 120%;
+}
+footer .footer__contact .contact__content .form-group button:hover {
+  box-shadow: 0 0 5px #e70faa, 0 0 10px #e70faa, 0 0 20px #e70faa, 0 0 40px #e70faa;
 }
 footer .contact__bottom {
   position: relative;
@@ -292,6 +360,10 @@ footer .contact__bottom .contact__bottom--content::after {
 footer .contact__bottom .contact__bottom--content span {
   color: #a7a7a7;
   margin: 0 30px;
+  transition: all 0.5s;
+}
+footer .contact__bottom .contact__bottom--content span:hover {
+  color: #686fff;
 }
 footer .contact__bottom .contact__bottom--content a {
   text-decoration: none;
@@ -311,4 +383,36 @@ footer .contact__bottom .contact__bottom--content a i {
   color: #a7a7a7;
   font-size: 26px;
   margin-left: 20px;
+  transition: all 0.5s;
+}
+footer .contact__bottom .contact__bottom--content a i:hover {
+  color: #e70faa;
+}
+
+@keyframes typewriter {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 430px;
+  }
+}
+@keyframes blink {
+  0% {
+    border-right-color: rgba(255, 255, 255, 0.75);
+  }
+  100% {
+    border-right-color: transparent;
+  }
+}
+@keyframes hello {
+  0% {
+    transform: rotate(15deg) translate(3px, 3px);
+  }
+  50% {
+    transform: rotate(-10deg) translate(-3px, -3px);
+  }
+  100% {
+    transform: rotate(15deg) translate(3px, 3px);
+  }
 }/*# sourceMappingURL=index.css.map */
