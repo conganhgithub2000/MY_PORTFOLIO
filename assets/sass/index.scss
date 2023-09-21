@@ -13,6 +13,7 @@ $color-text-4: #00c0fd;
 $color-text-5: #e70faa;
 $color-text-6: #000;
 $color-text-7: #fff;
+$color-text-8: #666;
 
 $color-bg-1: #191919;
 $color-bg-2: #363636;
@@ -42,7 +43,7 @@ header {
       width: 97px;
       height: 59px;
     }
-    button {
+    .navbar-toggler {
       i {
         color: $color-text-3;
         font-size: 30px;
@@ -78,6 +79,15 @@ header {
               color: $color-text-5;
             }
           }
+          .btnLightDark {
+            width: 28px;
+          }
+          .fa-sun {
+            color: #e3d536;
+          }
+          .fa-moon {
+            color: #d0da0e;
+          }
         }
       }
     }
@@ -85,12 +95,12 @@ header {
 }
 .content {
   .myself {
-    margin-top: 200px;
+    padding-top: 200px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     .myself__name {
-      color: $color-text-3;
+      color: #7ad5e0;
       font-size: 58px;
       font-weight: 700;
       line-height: 70px;
@@ -184,7 +194,6 @@ header {
             rgba(0, 192, 253, 1) 0%,
             rgba(231, 15, 170, 1) 100%
           );
-          margin-bottom: 30px;
           height: 530px;
           &:hover {
             box-shadow: 0 0 5px $color-text-5, 0 0 20px $color-text-5,
@@ -331,7 +340,7 @@ footer {
   .contact__bottom {
     position: relative;
     margin-top: 70px;
-    margin-bottom: 50px;
+    padding-bottom: 50px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -404,6 +413,43 @@ footer {
   }
 }
 
+// light dark
+body.light,
+body.light header {
+  background-color: $color-text-7;
+}
+
+body.light .navbar .collapse .nav-link,
+body.light .technology .technology__title p,
+body.light .content .projects .projects__title p,
+body.light footer .contact__title h2,
+body.light footer .contact__bottom .contact__bottom--content span,
+body.light footer .contact__bottom .contact__bottom--content a i,
+body.light footer .contact__bottom h2 {
+  color: $color-text-8;
+}
+
+body.light footer .contact__bottom .contact__bottom--content span:hover,
+body.light footer .contact__bottom .contact__bottom--content a i:hover {
+  color: $color-text-5;
+}
+
+body.light .myself__name p,
+body.light .technology .technology__title h2,
+body.light .content .projects .projects__title h2,
+body.light footer .contact__content h5 {
+  color: $color-text-3;
+}
+
+body.light .content .projects .projects__content .card {
+  box-shadow: 2px 2px 50px 0px rgba(0, 0, 0, 0.4);
+}
+
+body.light footer .footer__contact .contact__content .form-group input {
+  background-color: #a9eaea;
+}
+
+// animation
 @keyframes typewriter {
   0% {
     width: 0px;

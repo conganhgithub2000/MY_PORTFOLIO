@@ -288,6 +288,11 @@
                 <i class="fa-brands fa-instagram"></i>
               </a>
             </li>
+            <li class="navbar__LightDark nav-item mr-1 ml-1">
+              <a class="nav-link" id="btnDark">
+                <i class="fa-solid fa-sun btnLightDark"></i>
+              </a>
+            </li>
           </ul>
         </div>
       </nav>
@@ -1036,6 +1041,16 @@
     ></script>
     <script>
       new WOW().init();
+    </script>
+    <!-- light--dark -->
+    <script>
+      const body = document.body;
+      const btn_Dark = document.querySelector("#btnDark i");
+      btn_Dark.addEventListener("click", () => {
+        body.classList.toggle("light");
+        btn_Dark.classList.toggle("fa-sun");
+        btn_Dark.classList.toggle("fa-moon");
+      });
     </script>
   </body>
 </html>
