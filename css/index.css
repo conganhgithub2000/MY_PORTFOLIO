@@ -195,6 +195,7 @@ header .navbar-collapse .navbar-nav .nav-item .nav-link .fa-moon {
   overflow: hidden;
   background: #363636;
   height: 100%;
+  position: relative;
 }
 .content .projects .projects__content .row .card .card__content img {
   width: 100%;
@@ -213,18 +214,24 @@ header .navbar-collapse .navbar-nav .nav-item .nav-link .fa-moon {
 .content .projects .projects__content .row .card .card__content .card-body h6 {
   color: #a7a7a7;
 }
-.content .projects .projects__content .row .card .card__content .card-body .card__link {
-  margin-top: 20px;
+.content .projects .projects__content .row .card .card__content .card__footer {
+  position: absolute;
+  left: 0;
+  bottom: 16px;
+  right: 0;
+}
+.content .projects .projects__content .row .card .card__content .card__footer .card__link {
+  margin: 10px 20px 0;
   display: flex;
   justify-content: space-between;
   align-items: center;
 }
-.content .projects .projects__content .row .card .card__content .card-body .card__link a {
+.content .projects .projects__content .row .card .card__content .card__footer .card__link a {
   text-decoration: none;
   color: #fff;
   transition: all 0.6s;
 }
-.content .projects .projects__content .row .card .card__content .card-body .card__link a:hover {
+.content .projects .projects__content .row .card .card__content .card__footer .card__link a:hover {
   color: #e70faa;
 }
 
